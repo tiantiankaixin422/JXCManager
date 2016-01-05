@@ -1,15 +1,26 @@
 Rails.application.routes.draw do
-  #devise_for :users
+  resources :out_repertories
+  resources :put_repertories
+  resources :parts
+  #resources :users
   devise_for :users, :controllers => {
                       :registrations => 'devise_ext/registrations'
 
   }
+  get 'users' => 'users#index'
+  get 'users/:id/edit' => 'users#edit'
+  get 'users/:id' => 'users#show'
+  patch 'users/:id' => 'users#update'
+  put 'users/:id' => 'users#update'
+  delete 'users/:id' => 'users#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  get 'repertory_info' => 'parts#repertory_info'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

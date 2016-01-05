@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Get at:</strong>
+  <%= @out_repertory.get_at %>
+</p>
+
+<p>
+  <strong>Get by:</strong>
+  <%= @out_repertory.get_by %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @out_repertory.desc %>
+</p>
+
+<p>
+  <strong>Pay money:</strong>
+  <%= @out_repertory.pay_money %>
+</p>
+
+<p>
+  <strong>Sum price:</strong>
+  <%= @out_repertory.sum_price %>
+</p>
+
+<p>
+  <strong>Real price:</strong>
+  <%= @out_repertory.real_price %>
+</p>
+
+<%= link_to 'Edit', edit_out_repertory_path(@out_repertory) %> |
+<%= link_to 'Back', out_repertories_path %>

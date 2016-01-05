@@ -1,1 +1,153 @@
+<%= render 'layouts/header' %>
 欢迎<%= current_user[:username] %>
+<div class="container theme-showcase background-color-white yuanjiao yinying" role="main"><!-- 主体 -->
+  <div class="container-shortcut-box"><!-- 快捷入口 -->
+    <div class="row">
+      <div class="col-xs-3"><!-- 服务 -->
+        <div class="container-shortcut-box-fuwu">
+          <a href="#">
+            <%=image_tag 'icon-service.png'  %>
+            <span class="color-white">服务报告信息</span>
+          </a>
+        </div>
+      </div><!-- 服务 end -->
+      <div class="col-xs-3"><!-- 入库 -->
+        <div class="container-shortcut-box-ruku">
+          <a href="#">
+            <%=image_tag 'icon-warehousing.png'  %>
+            <span class="color-white">入库</span>
+          </a>
+        </div>
+      </div><!-- 入库 end -->
+      <div class="col-xs-3"><!-- 出库 -->
+        <div class="container-shortcut-box-chuku">
+          <a href="#">
+            <%=image_tag 'icon-library.png'  %>
+            <span class="color-white">出库</span>
+          </a>
+        </div>
+      </div><!-- 出库 end -->
+      <div class="col-xs-3"><!-- 日历 -->
+        <div class="container-shortcut-box-rili">
+          <a href="#">
+            <%=image_tag 'icon-calendar.png'  %>
+            <span class="color-white">日历</span>
+          </a>
+        </div>
+      </div><!-- 日历 end -->
+    </div>
+  </div><!-- 快捷入口 end -->
+  <!-- 近期活动 -->
+  <div class="page-header">
+    <h3>最近的活动</h3>
+  </div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>序号</th>
+      <th>技术员</th>
+      <th>服务状态</th>
+      <th>委托人（被服务人）</th>
+      <th>服务时间</th>
+      <th>维修品牌</th>
+      <th>服务内容</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>1</td>
+      <td>苗航</td>
+      <td>RIS001</td>
+      <td>张三</td>
+      <td>2015-11-11</td>
+      <td>西门子-冰箱</td>
+      <td>保内小修</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>苗航</td>
+      <td>RIS002</td>
+      <td>李四</td>
+      <td>2015-11-11</td>
+      <td>西门子-空调</td>
+      <td>保内大修</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>苗航</td>
+      <td>RIS003</td>
+      <td>王五</td>
+      <td>2015-11-11</td>
+      <td>西门子-电视</td>
+      <td>保内大修A</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>苗航</td>
+      <td>RIS004</td>
+      <td>王五</td>
+      <td>2015-11-11</td>
+      <td>西门子-电视</td>
+      <td>保内大修A</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>苗航</td>
+      <td>RIS005</td>
+      <td>赵六</td>
+      <td>2015-11-11</td>
+      <td>西门子-抽油烟机</td>
+      <td>保内大修C</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>苗航</td>
+      <td>RIS006</td>
+      <td>张三</td>
+      <td>2015-11-11</td>
+      <td>西门子-冰箱</td>
+      <td>保内小修</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>苗航</td>
+      <td>RIS007</td>
+      <td>李四</td>
+      <td>2015-11-11</td>
+      <td>西门子-空调</td>
+      <td>保内大修</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>苗航</td>
+      <td>RIS008</td>
+      <td>王五</td>
+      <td>2015-11-11</td>
+      <td>西门子-电视</td>
+      <td>保内大修A</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>苗航</td>
+      <td>RIS009</td>
+      <td>王五</td>
+      <td>2015-11-11</td>
+      <td>西门子-电视</td>
+      <td>保内大修A</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>苗航</td>
+      <td>RIS010</td>
+      <td>赵六</td>
+      <td>2015-11-11</td>
+      <td>西门子-抽油烟机</td>
+      <td>保内大修C</td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="container-shortcut-table-more">
+    <a href="#">查看更多</a>
+  </div>
+  <!-- 近期活动 end -->
+</div><!-- 主体 end -->

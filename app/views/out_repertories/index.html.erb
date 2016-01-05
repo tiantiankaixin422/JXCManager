@@ -1,0 +1,69 @@
+<%= render 'layouts/header' %>
+<%= render 'layouts/edit_pop' %>
+
+<div id="out_repertory" class="container theme-showcase background-color-white yuanjiao yinying" role="main"><!-- 主体 -->
+  <div class="container-service clearfix"><!-- 新建、搜索  -->
+    <div class="container-service-header">
+      <%= button_to "新建", new_out_repertory_path, method: "get", remote: true, :class => 'btn btn-lg btn-primary', 'data-toggle' => 'modal', 'data-target' => '.bs-example-modal-lg' %>
+
+      <div class="container-service-header-right">
+        <form class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="搜索内容">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-default">搜索</button>
+        </form>
+      </div>
+    </div>
+  </div><!-- 新建、搜索 end -->
+  <div class="table-responsive"><!-- 表格  -->
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>序号</th>
+        <th>配件代码</th>
+        <th>配件名称</th>
+        <th>配件单价</th>
+        <th>数量</th>
+        <th>领用日期</th>
+        <th>服务单子</th>
+        <th>需缴纳金额</th>
+        <th>配件费</th>
+        <th>领用人</th>
+        <th colspan="2">设置</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @out_repertories.each_with_index do |out_repertory,index|
+        part = out_repertory.part
+      %>
+          <tr>
+            <td><%= index+1 %></td>
+            <td><%= part.code %></td>
+            <td><%= part.name %></td>
+            <td><%= part.price %></td>
+            <td><%= part.number %></td>
+            <td><%= out_repertory.get_at %></td>
+            <td><%= out_repertory.desc %></td>
+            <td><%= out_repertory.pay_money %></td>
+            <td><%= out_repertory.sum_price %></td>
+            <td><%= out_repertory.get_by %></td>
+            <td><%= link_to '查看', out_repertory, remote: true, 'data-toggle' => 'modal', 'data-target' => '.bs-example-modal-lg'  %></td>
+            <td><%= link_to '删除', out_repertory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div><!-- 表格 end -->
+
+  <div class="container-service-footer">
+    <%= paginate @out_repertories, :theme => 'my_custom_theme' %>
+  </div>
+</div><!-- 主体 end -->
+<script type="text/javascript" charset="utf-8">
+  $('#out_repertory_nav').attr('class','active');
+</script>
+
+

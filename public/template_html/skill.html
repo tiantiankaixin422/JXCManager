@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>主页</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/css.css" rel="stylesheet">
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+    <!-- 导航 -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container navbar-height">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">LOGO</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="project.html">主页</a></li>
+                    <li><a href="ruku.html">入库</a></li>
+                    <li><a href="chuku.html">出库</a></li>
+                    <li><a href="service.html">服务报告信息</a></li>
+                    <li><a href="rili.html">日历</a></li>
+                    <li class="active"><a href="skill.html">技术员</a></li>
+                    <li><a href="input.html">配件录入</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户信息 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">信息1</a></li>
+                            <li><a href="#">信息2</a></li>
+                            <li><a href="#">信息3</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><!--导航 end -->
+    
+    <div class="container theme-showcase background-color-white yuanjiao yinying" role="main"><!-- 主体 -->
+        <div class="container-service clearfix"><!-- 新建、搜索  -->
+            <h3>技术员</h3>
+            <div class="container-service-header">
+                <button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">新建</button>
+                <!-- 弹出框  -->
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="gridModalLabel">新建</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <!-- 员工基本信息  -->
+                                        <div class="row show-grid">
+                                            <h5 class="page-header margin">基本信息</h5>
+                                            <div class="col-md-4">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputName2">姓名</label>
+                                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputName2">性别</label>
+                                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputName2">年龄</label>
+                                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row show-grid">
+                                            <div class="col-md-4">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputName2">职位</label>
+                                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-inline">
+                                                    <label for="exampleInputName2">联系电话</label>
+                                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 员工基本信息 end -->
+                                        <!-- 账户信息  -->
+                                        <div class="row show-grid">
+                                            <h5 class="page-header margin">账户信息</h5>
+                                            <div class="col-md-4">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputName2">账号</label>
+                                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputName2">密码</label>
+                                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 账户信息 end -->
+                                        <!-- 权限 -->
+                                        <div class="row show-grid">  
+                                            <h5 class="page-header margin">权限选择</h5>  
+                                            <div class="col-md-4">
+                                                <div class="skill-competence">
+                                                    <h5>基本权限</h5>
+                                                    <p>查看基本信息，无法编辑，无法查看金额</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="skill-competence skill-competence-selected"><!-- skill-competence-selected为选中属性 -->
+                                                    <h5>高级权限</h5>
+                                                    <p>查看基本信息，可以进行信息录入，可以编辑，无法查看金额</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="skill-competence">
+                                                    <h5>最高权限</h5>
+                                                    <p>查看所有信息，可以进行信息录入，可以编辑，可以查看金额</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 权限 end -->
+                                    </div>    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                    <button type="button" class="btn btn-primary">确定</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 弹出框 end -->
+            </div>
+        </div><!-- 新建、搜索 end -->
+        <div class="table-responsive"><!-- 表格  -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>年龄</th>
+                        <th>职位</th>
+                        <th>联系电话</th>
+                        <th>账号</th>
+                        <th>密码</th>
+                        <th>设置</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>25</td>
+                        <td>总经理</td>
+                        <td>137-0000-0000</td>
+                        <td>zhangsan123456</td>
+                        <td>123456</td>
+                        <td>
+                            <a data-toggle="modal" href="" data-target=".bianji">查看</a>
+                            <!-- 弹出框  -->
+                            <div class="modal fade bianji" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="gridModalLabel">查看</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row show-grid"><!-- 基本信息  -->
+                                                        <h5 class="page-header margin">基本信息</h5>
+                                                        <div class="col-md-12">
+                                                            <div class="form-horizontal">
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">姓名</label>
+                                                                    <div class="col-sm-10">
+                                                                      <p class="form-control-static text-background">张三</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">性别</label>
+                                                                    <div class="col-sm-10">
+                                                                      <p class="form-control-static text-background">男</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">年龄</label>
+                                                                    <div class="col-sm-10">
+                                                                      <p class="form-control-static text-background">26</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">职位</label>
+                                                                    <div class="col-sm-10">
+                                                                      <p class="form-control-static text-background">总经理</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">产品分类</label>
+                                                                    <div class="col-sm-10">
+                                                                      <p class="form-control-static text-background">洗衣机</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- 基本信息 end -->
+                                                    <div class="row show-grid">  <!-- 账号  -->
+                                                        <h5 class="page-header margin">账号信息</h5>  
+                                                        <div class="col-md-12">
+                                                            <div class="form-horizontal">
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">账号</label>
+                                                                    <div class="col-sm-10">
+                                                                      <p class="form-control-static text-background">zhangsan123456</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">密码</label>
+                                                                    <div class="col-sm-10">
+                                                                      <p class="form-control-static text-background">123456</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- 账号 end -->
+                                                    <div class="row show-grid"><!-- 权限  -->
+                                                        <h5 class="page-header margin">权限</h5>
+                                                        <div class="col-md-12">
+                                                            <div class="form-horizontal">
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">拥有权限</label>
+                                                                    <div class="col-md-4">
+                                                                        <div class="skill-competence skill-competence-selected"><!-- skill-competence-selected为选中属性 -->
+                                                                            <h5>高级权限</h5>
+                                                                            <p>查看基本信息，可以进行信息录入，可以编辑，无法查看金额</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- 权限 end -->
+                                                </div>    
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 弹出框 end -->
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>李四</td>
+                        <td>男</td>
+                        <td>27</td>
+                        <td>信息录入员</td>
+                        <td>137-0000-0000</td>
+                        <td>lisi123</td>
+                        <td>111111</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>赵四</td>
+                        <td>女</td>
+                        <td>22</td>
+                        <td>技术员</td>
+                        <td>137-0000-0000</td>
+                        <td>zhao123456</td>
+                        <td>333123</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>王五</td>
+                        <td>男</td>
+                        <td>27</td>
+                        <td>技术员</td>
+                        <td>137-0000-0000</td>
+                        <td>wang123456wu</td>
+                        <td>123456</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>王五</td>
+                        <td>男</td>
+                        <td>27</td>
+                        <td>技术员</td>
+                        <td>137-0000-0000</td>
+                        <td>zhangsan123456</td>
+                        <td>123456</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>王五</td>
+                        <td>男</td>
+                        <td>27</td>
+                        <td>技术员</td>
+                        <td>137-0000-0000</td>
+                        <td>zhangsan123456</td>
+                        <td>123456</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>王五</td>
+                        <td>男</td>
+                        <td>27</td>
+                        <td>技术员</td>
+                        <td>137-0000-0000</td>
+                        <td>lisi123</td>
+                        <td>123456</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>王五</td>
+                        <td>男</td>
+                        <td>27</td>
+                        <td>技术员</td>
+                        <td>137-0000-0000</td>
+                        <td>zhangsan123456</td>
+                        <td>123456</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>王五</td>
+                        <td>男</td>
+                        <td>27</td>
+                        <td>技术员</td>
+                        <td>137-0000-0000</td>
+                        <td>zhangsan123456</td>
+                        <td>123456</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>王五</td>
+                        <td>男</td>
+                        <td>27</td>
+                        <td>技术员</td>
+                        <td>137-0000-0000</td>
+                        <td>wang147852369</td>
+                        <td>963258741</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!-- 表格 end -->
+        
+        <div class="container-service-footer">
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div><!-- 主体 end -->
+</body>
+</html>

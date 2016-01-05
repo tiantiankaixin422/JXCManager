@@ -1,0 +1,8 @@
+$('#gridModalLabel').html('编辑');
+var input_type = $("#edit_type").val();
+if(input_type == "input_part") {
+    $('#form_template').html("<%= escape_javascript(render 'form') %>");
+}else{
+    $('#form_template').html("<%= escape_javascript(render 'repertory_form') %>");
+}
+

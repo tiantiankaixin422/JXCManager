@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>主页</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/css.css" rel="stylesheet">
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+    <!-- 导航 -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container navbar-height">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">LOGO</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="project.html">主页</a></li>
+                    <li><a href="ruku.html">入库</a></li>
+                    <li><a href="chuku.html">出库</a></li>
+                    <li><a href="service.html">服务报告信息</a></li>
+                    <li><a href="rili.html">日历</a></li>
+                    <li><a href="skill.html">技术员</a></li>
+                    <li><a href="input.html">配件录入</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户信息 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">信息1</a></li>
+                            <li><a href="#">信息2</a></li>
+                            <li><a href="#">信息3</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><!--导航 end -->
+    
+    <div class="container theme-showcase background-color-white yuanjiao yinying" role="main"><!-- 主体 -->
+        <div class="container-service clearfix"><!-- 新建、搜索  -->
+            <h3>错误信息页</h3>
+            <div class="bs-example-bg-classes" data-example-id="contextual-backgrounds-helpers">
+                <p class="bg-danger text-danger">错误信息内容显示在此错误信息内容显示在此错误信息内容显示在此</p>
+            </div>
+        </div><!-- 新建、搜索 end -->
+        <div class="table-responsive"><!-- 错误内容  -->
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row show-grid">
+                        <h5 class="page-header margin">基本信息</h5>
+                        <div class="col-md-4">
+                            <form class="form-inline">
+                                <!-- 错误input -->
+                                <div class="form-group has-error has-feedback">
+                                    <label for="exampleInputName2">配件代码</label>
+                                    <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+                                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                                <!-- 错误input end -->
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">配件名称</label>
+                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">配件数量</label>
+                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row show-grid">  
+                        <h5 class="page-header margin">领取信息</h5>  
+                        <div class="col-md-4">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">领取日期</label>
+                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">领用人</label>
+                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row show-grid">
+                        <div class="col-md-4">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">服务单子</label>
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row show-grid">
+                        <h5 class="page-header margin">价格信息</h5>
+                        <div class="col-md-4">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">配件单价</label>
+                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">需缴纳金额</label>
+                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">配件总价</label>
+                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row show-grid">
+                        <div class="col-md-4">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">实际扣款</label>
+                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div><!-- 错误内容 end -->
+        
+        <div class="container-service-footer">
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div><!-- 主体 end -->
+</body>
+</html>

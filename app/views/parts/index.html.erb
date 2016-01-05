@@ -1,0 +1,62 @@
+<%= render 'layouts/header' %>
+<!--
+<p id="notice"><%= notice %></p>
+-->
+<input type="hidden" id="edit_type" value="input_part">
+<div class="container theme-showcase background-color-white yuanjiao yinying" role="main"><!-- 主体 -->
+  <div class="container-service clearfix"><!-- 新建、搜索  -->
+    <div class="container-service-header">
+      <%= button_to "新建", new_part_path, method: "get", remote: true, :class => 'btn btn-lg btn-primary', 'data-toggle' => 'modal', 'data-target' => '.bs-example-modal-lg' %>
+      <div class="container-service-header-right">
+        <form class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" id="exampleInputAmount" placeholder="搜索内容">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-default">搜索</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- 新建、搜索 end -->
+  <div class="table-responsive"><!-- 表格  -->
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>序号</th>
+        <th>配件名称</th>
+        <th>配件代码</th>
+        <th>配件价格</th>
+        <th>设置</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @parts.each_with_index do |part, index|
+      %>
+          <tr>
+            <td><%= index+1 %></td>
+            <td><%= part[:name] %></td>
+            <td><%= part[:code] %></td>
+            <td><%= part[:price] %></td>
+
+            <td>
+              <%#= link_to '查看', part %>
+              <%= link_to '编辑', edit_part_path(part), remote: true, 'data-toggle' => 'modal', 'data-target' => '.bs-example-modal-lg' %>
+              <%= link_to '删除', part, method: :delete, class: 'margin-left-20', data: {confirm: 'Are you sure?'} %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  <!-- 表格 end -->
+  <div class="container-service-footer">
+    <%= paginate @parts, :theme => 'my_custom_theme' %>
+  </div>
+</div>
+<%= render 'layouts/edit_pop' %>
+
+<script type="text/javascript" charset="UTF-8">
+    $('#input_parts').attr('class', 'active');
+</script>

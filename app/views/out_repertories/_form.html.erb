@@ -1,0 +1,41 @@
+<%= form_for(@out_repertory) do |f| %>
+  <% if @out_repertory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@out_repertory.errors.count, "error") %> prohibited this out_repertory from being saved:</h2>
+
+      <ul>
+      <% @out_repertory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :get_at %><br>
+    <%= f.datetime_select :get_at %>
+  </div>
+  <div class="field">
+    <%= f.label :get_by %><br>
+    <%= f.number_field :get_by %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br>
+    <%= f.text_area :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :pay_money %><br>
+    <%= f.text_field :pay_money %>
+  </div>
+  <div class="field">
+    <%= f.label :sum_price %><br>
+    <%= f.text_field :sum_price %>
+  </div>
+  <div class="field">
+    <%= f.label :real_price %><br>
+    <%= f.text_field :real_price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

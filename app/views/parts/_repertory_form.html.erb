@@ -1,0 +1,71 @@
+<%= form_for(@part) do |f| %>
+    <% if @part.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= "#{@part.errors.count}个错误!" %> :</h2>
+          <ul>
+            <%
+               @part.errors.messages.each do |message| %>
+                <li>
+                  <%
+                     field_name = '配件名称' if message[0].eql? :name
+                     field_name = '配件代码' if message[0].eql? :code
+                     field_name = '配件单价' if message[0].eql? :price
+                  %>
+                  <%= field_name + message[1].to_s %>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <%= hidden_field_tag('input_type', 'repertory_info') %>
+    <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row show-grid">
+          <h5 class="page-header margin">基本信息</h5>
+
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '配件名称' %>
+                <%= f.text_field(:name, placeholder: '配件名称', :class => 'form-control') %>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '配件代码' %>
+                <%= f.text_field(:code, placeholder: '配件代码', :class => 'form-control') %>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '配件单价' %>
+                <%= f.number_field(:price, placeholder: '配件单价', :class => 'form-control', step: '0.01') %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row show-grid">
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '库存数量' %>
+                <%= f.number_field(:number, placeholder: '库存数量', :class => 'form-control') %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      <%= f.submit '确定', :class => 'btn btn-primary' %>
+    </div>
+<% end %>
+
+
+
+

@@ -1,0 +1,149 @@
+<%= form_for(@put_repertory) do |f| %>
+  <% if @put_repertory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@put_repertory.errors.count, "error") %> prohibited this put_repertory from being saved:</h2>
+
+      <ul>
+      <% @put_repertory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row show-grid">
+          <h5 class="page-header margin">基本信息</h5>
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '订单编号' %>
+                <%= f.text_field :order_num,placeholder: '订单编号', :class => 'form-control', :required => true %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-inline">
+              <%= f.label '配件名称' %>
+              <%= f.select :part_id, Part.all.collect { |p| [ p.name, p.id ] }, {include_blank: true}, class: 'form-control', :required => true %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '配件代码' %>
+                <input type="text" disabled class="form-control" id="part_code" placeholder="配件代码">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row show-grid">
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '配件数量' %>
+                <%= f.number_field :sum, placeholder: '配件数量', :class => 'form-control', :required => true %>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-inline">
+              <%= f.label '产品分类' %>
+              <%= f.text_field :project_class, placeholder: '产品分类', :class => 'form-control' %>
+            </div>
+          </div>
+        </div>
+        <div class="row show-grid">
+          <h5 class="page-header margin">物流信息</h5>
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '物流单号' %>
+                <%= f.text_field :express_num, placeholder: '物流单号', :class => 'form-control' %>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '到货日期' %>
+                <%= f.datetime_select :arrival_date, placeholder: '到货日期', :class => 'form-control',
+                    :use_month_numbers => true,
+                    :order => [:year, :month, :day],
+                    datetime_separator: '--'
+                %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row show-grid">
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '备注信息' %>
+                <%= f.text_area :remarks, placeholder: '备注信息', :class => 'form-control' %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row show-grid">
+          <h5 class="page-header margin">价格信息</h5>
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '配件单价' %>
+                <input type="text" id="part_price" disabled class="form-control" placeholder="配件单价">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '配件总价' %>
+                <%= f.text_field :total_price, placeholder: '配件总价', readonly:true, :class => 'form-control'  %>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-inline">
+              <%= f.label '折扣比例' %>
+              <%= f.number_field :discount, placeholder: '折扣比例', :class => 'form-control', step: '0.01', min: 0, max: 9.99  %>
+              <%#= select :discount, Array(0..10).reverse!.collect { |i|
+                                        if i == 0
+                                            [ '免费',i ]
+                                        elsif i == 10
+                                          [ '全款支付',i ]
+                                        else
+                                          [ "#{i}折支付",i ]
+                                        end
+                                    },{}, class: 'form-control' %>
+              <%#= select_tag(:discount_select,options_for_select(Array(0..10).reverse!.collect { |i|
+                                                            if i == 0
+                                                              [ '免费',i ]
+                                                            elsif i == 10
+                                                              [ '请选择',i ]
+                                                            else
+                                                              [ "#{i}折支付",i ]
+                                                            end
+                                                          }), class: 'form-control') %>
+            </div>
+          </div>
+        </div>
+        <div class="row show-grid">
+          <div class="col-md-4">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label '实际扣款' %>
+                <%= f.text_field :discount_price, readonly: true, placeholder: '实际扣款', :class => 'form-control' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      <%= f.submit '确定', :class => 'btn btn-primary' %>
+    </div>
+<% end %>

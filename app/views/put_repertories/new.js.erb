@@ -1,0 +1,35 @@
+$('#gridModalLabel').html('新建');
+$('#form_template').html("<%= escape_javascript(render 'form') %>");
+$('#put_repertory_part_id').on('change', function(){
+    $.ajax({
+        url: "/parts/"+$(this).val(),
+        type: 'get',
+        dataType: 'json',
+        success: function(data){
+            $('#part_code').val(data['code']);
+            $('#part_price').val(data['price']);
+            var part_sum = $('#put_repertory_sum').val();
+            if(data['price'] >= 0 && part_sum >= 0) {
+                $('#put_repertory_total_price').val(data['price'] * part_sum);
+                compute_discount_price()
+            }
+        }
+    })
+});
+
+$('#put_repertory_sum').on('input',function(){
+    var part_price = $('#part_price').val();
+    var part_sum = $(this).val();
+    if(part_price >= 0 && part_sum >= 0) {
+        $('#put_repertory_total_price').val(part_price * part_sum);
+        compute_discount_price()
+    }
+});
+$('#put_repertory_discount').on('input',function(){
+    compute_discount_price()
+});
+var compute_discount_price = function(){
+    var discount = $('#put_repertory_discount').val()*10 || 100;
+    var total_price = $('#put_repertory_total_price').val();
+    $('#put_repertory_discount_price').val(total_price*discount/100);
+};

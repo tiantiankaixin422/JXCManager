@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>服务报告信息</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/css.css" rel="stylesheet">
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+    <!-- 导航 -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container navbar-height">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">LOGO</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="project.html">主页</a></li>
+                    <li><a href="ruku.html">入库</a></li>
+                    <li><a href="chuku.html">出库</a></li>
+                    <li class="active"><a href="service.html">服务报告信息</a></li>
+                    <li><a href="rili.html">日历</a></li>
+                    <li><a href="skill.html">技术员</a></li>
+                    <li><a href="input.html">配件录入</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户信息 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">信息1</a></li>
+                            <li><a href="#">信息2</a></li>
+                            <li><a href="#">信息3</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><!--导航 end -->
+    
+    <div class="container theme-showcase background-color-white yuanjiao yinying" role="main"><!-- 主体 -->
+        <div class="container-service clearfix"><!-- 新建、搜索  -->
+            <h3>服务报告信息</h3>
+            <div class="container-service-header">
+                <button type="button" class="btn btn-lg btn-primary">新建</button>
+                <div class="container-service-header-right">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="搜索内容">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </div><!-- 新建、搜索 end -->
+        <div class="table-responsive"><!-- 表格  -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>技术员</th>
+                        <th>服务状态</th>
+                        <th>委托人（被服务人）</th>
+                        <th>服务时间</th>
+                        <th>维修品牌</th>
+                        <th>服务内容</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>苗航</td>
+                        <td>RIS001</td>
+                        <td>张三</td>
+                        <td>2015-11-11</td>
+                        <td>西门子-冰箱</td>
+                        <td>保内小修</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>苗航</td>
+                        <td>RIS002</td>
+                        <td>李四</td>
+                        <td>2015-11-11</td>
+                        <td>西门子-空调</td>
+                        <td>保内大修</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>苗航</td>
+                        <td>RIS003</td>
+                        <td>王五</td>
+                        <td>2015-11-11</td>
+                        <td>西门子-电视</td>
+                        <td>保内大修A</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>苗航</td>
+                        <td>RIS004</td>
+                        <td>王五</td>
+                        <td>2015-11-11</td>
+                        <td>西门子-电视</td>
+                        <td>保内大修A</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>苗航</td>
+                        <td>RIS005</td>
+                        <td>赵六</td>
+                        <td>2015-11-11</td>
+                        <td>西门子-抽油烟机</td>
+                        <td>保内大修C</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>苗航</td>
+                        <td>RIS006</td>
+                        <td>张三</td>
+                        <td>2015-11-11</td>
+                        <td>西门子-冰箱</td>
+                        <td>保内小修</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>苗航</td>
+                        <td>RIS007</td>
+                        <td>李四</td>
+                        <td>2015-11-11</td>
+                        <td>西门子-空调</td>
+                        <td>保内大修</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>苗航</td>
+                        <td>RIS008</td>
+                        <td>王五</td>
+                        <td>2015-11-11</td>
+                        <td>西门子-电视</td>
+                        <td>保内大修A</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>苗航</td>
+                        <td>RIS009</td>
+                        <td>王五</td>
+                        <td>2015-11-11</td>
+                        <td>西门子-电视</td>
+                        <td>保内大修A</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>苗航</td>
+                        <td>RIS010</td>
+                        <td>赵六</td>
+                        <td>2015-11-11</td>
+                        <td>西门子-抽油烟机</td>
+                        <td>保内大修C</td>
+                        <td>
+                            <a href="">查看</a>
+                            <a class="margin-left-20" href="">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!-- 表格 end -->
+        
+        <div class="container-service-footer">
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div><!-- 主体 end -->
+
+</body>
+
+</html>
